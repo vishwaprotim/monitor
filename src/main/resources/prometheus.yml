@@ -1,0 +1,18 @@
+# Global Configuration
+
+global:
+  scrape_interval: 15s # How frequently to scrape targets by default. Default is 1m
+  evaluation_interval: 15s # How frequently to evaluate rules. Default is 1m
+  scrape_timeout: 10s
+
+# Load rules once and periodically evaluate them according to global 'evaluation_interval'
+rule_files:
+#  - "first_rules.yaml"
+#  - "second_rules.yaml"
+
+scrape_configs:
+  - job_name: 'spring-boot'
+    metrics_path: '/actuator/prometheus'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['host.docker.internal:8080']
