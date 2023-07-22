@@ -40,7 +40,7 @@ Therefore, the overall workflow is:
 ## Prometheus
 For prometheus, we are using Docker.
 1. Pull the Prometheus image from docker hub
-2. Prometheus configurations are present in prometheus.yml. Configure it as needed.
+2. Prometheus configurations are present in [prometheus.yml](src/main/resources/prometheus.yml). Configure it as needed.
 3. Start the container. Notice the system path to yml and default prometheus port 9090
 4. Once the container is running, open prometheus from from http://localhost:9090/
 ```shell
