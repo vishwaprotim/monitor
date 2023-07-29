@@ -14,15 +14,16 @@ import org.springframework.stereotype.Component;
 public class LoggingInterceptor {
 
     @Pointcut("execution( * com.protim.monitor.repository.StudentRepository.*(..))")
-    public void repository(){}
+    public void repository() {
+    }
 
     @Before("repository()")
-    public void logBeforeRepo(JoinPoint jp){
+    public void logBeforeRepo(JoinPoint jp) {
         log.info("Entering: " + jp.getSignature());
     }
 
     @After("repository()")
-    public void logAfterRepo(JoinPoint jp){
+    public void logAfterRepo(JoinPoint jp) {
         log.info("Exiting: " + jp.getSignature());
     }
 }
