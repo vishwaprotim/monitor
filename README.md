@@ -1,14 +1,18 @@
 # Monitoring Microservices
 
 This is a small tutorial on monitoring spring boot microservices. It uses -
-1. **Spring Data Rest** - To create REST APIs without controller and service
-2. **H2 in-memory database** - To store data without relying on installation of a separate RDBMS  
-3. **AOP** - To explain logging around Rest Repositories
-4. **Spring Boot Actuator** - To monitor and generate metrics for the microservice
-5. **Prometheus** - Scraping metrics from the actuator for user to search and explore
-6. **Grafana** - Create dashboards, charts and make microservice monitoring more intuitive.
+1. **Spring Data Rest** - To create REST APIs without controller and service. Click [here](https://docs.spring.io/spring-data/rest/docs/current/reference/html) for the documentation from Spring
+2. **H2 in-memory database** - To store data without relying on installation of a separate RDBMS
+3. **Swagger** - For Documentation.
+4. **AOP** - To explain logging around Rest Repositories
+5. **Spring Boot Actuator** - To monitor and generate metrics for the microservice
+6. **Prometheus** - Scraping metrics from the actuator for user to search and explore
+7. **Grafana** - Create dashboards, charts and make microservice monitoring more intuitive.
 
-This project uses gradle as build tool and lombok to reduce boilerplate java code.
+This project uses gradle as build tool and lombok to reduce boilerplate java code. Once the server is up, try the API from [here](http://localhost:8080/swagger-ui/index.html).
+
+## Documentation
+This project uses Swagger3 with Open API Specification. Check [this](https://springdoc.org/#migrating-from-springfox) to get more details on how to migrate from Swagger2 Spring Fox to Swagger 3.
 
 ## Actuator
 The Spring Boot Actuator provides endpoints to check various metrics for your microservice. Check [application.yml](src/main/resources/application.yml) on:

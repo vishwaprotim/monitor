@@ -1,6 +1,7 @@
 package com.protim.monitor.repository;
 
 import com.protim.monitor.entity.Student;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
@@ -22,6 +23,7 @@ import java.math.BigInteger;
  *
  * @author vishwaprotim
  */
+@Tag(name = "Student API")
 @RepositoryRestResource(collectionResourceRel = "student", path = "student")
 public interface StudentRepository extends JpaRepository<Student, BigInteger> {
 

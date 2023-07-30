@@ -1,4 +1,4 @@
-package com.protim.monitor.aspect;
+package com.protim.monitor.interceptor;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;

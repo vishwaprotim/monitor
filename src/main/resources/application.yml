@@ -17,6 +17,15 @@ spring:
     console:
       enabled: true
 
+springdoc:
+  api-docs:
+    path: /api-docs
+  show-actuator: true
+  swagger-ui:
+    enabled: true
+    #tagsSorter: alpha
+  pathsToMatch: /actuator/prometheus, /actuator/metrics, /actuator/metrics/*, /actuator/loggers, /actuator/info, /actuator/health, /actuator/beans, /actuator/, /api/student, /api/student/*
+
 management:
   endpoint:
     health:
