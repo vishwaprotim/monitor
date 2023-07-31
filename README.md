@@ -9,10 +9,15 @@ This is a small tutorial on monitoring spring boot microservices. It uses -
 6. **Prometheus** - Scraping metrics from the actuator for user to search and explore
 7. **Grafana** - Create dashboards, charts and make microservice monitoring more intuitive.
 
-This project uses gradle as build tool and lombok to reduce boilerplate java code. Once the server is up, try the API from [here](http://localhost:8080/swagger-ui/index.html).
+This project uses gradle as build tool and lombok to reduce boilerplate java code.
 
 ## Documentation
 This project uses Swagger3 with Open API Specification. Check [this](https://springdoc.org/#migrating-from-springfox) to get more details on how to migrate from Swagger2 Spring Fox to Swagger 3.
+
+## Testing this API
+You can test this in your local server (localhost). Default port is 8080. Once the server is up, try the API from the swagger url [here](http://localhost:8080/swagger-ui/index.html).
+
+This API also has an [API Collection in the resources folder](src/main/resources/Student%20API.postman_collection.json), which can be used to test using Postman.
 
 ## Actuator
 The Spring Boot Actuator provides endpoints to check various metrics for your microservice. Check [application.yml](src/main/resources/application.yml) on:
