@@ -27,8 +27,8 @@ import java.math.BigInteger;
 @RepositoryRestResource(collectionResourceRel = "student", path = "student")
 public interface StudentRepository extends JpaRepository<Student, BigInteger> {
 
-    // Disabling delete using entity method
+    // You can disable the delete method by setting exported = false
     @Override
-    @RestResource(exported = false)
+    @RestResource(exported = true)
     void delete(Student entity);
 }
