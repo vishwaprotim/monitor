@@ -15,9 +15,29 @@ This project uses gradle as build tool and lombok to reduce boilerplate java cod
 This project uses Swagger3 with Open API Specification. Check [this](https://springdoc.org/#migrating-from-springfox) to get more details on how to migrate from Swagger2 Spring Fox to Swagger 3.
 
 ## Testing this API
+
+### Local Server
 You can test this in your local server (localhost). Default port is 8080. Once the server is up, try the API from the swagger url [here](http://localhost:8080/swagger-ui/index.html).
 
 This API also has an [API Collection in the resources folder](src/main/resources/Student%20API.postman_collection.json), which can be used to test using Postman.
+
+### As Docker Container
+This project comes with a [Dockerfile](Dockerfile) to help run it as a docker container. You can install Docker Destop in your machine if not already installed.
+
+Navigate to the project directory and build the project in your IDE PowerShell -
+```shell
+./gradlew build
+```
+
+Run this command to create latest image -
+```shell
+docker build --tag=monitor:latest .
+```
+
+Run this command to create a container of the image and run it at 8080 port -
+```shell
+docker run --name monitor_app -p 8080:8080 monitor:latest
+```
 
 ## Actuator
 The Spring Boot Actuator provides endpoints to check various metrics for your microservice. Check [application.yml](src/main/resources/application.yml) on:
